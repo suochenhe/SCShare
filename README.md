@@ -1,5 +1,7 @@
 # SCShare       
+
 第三方原生分享登录封装   
+
 **注意点：**
 新浪和朋友圈 分享 只取 title
 
@@ -59,17 +61,11 @@ tencent	  tencent拼接appId
 weixin             appId
 ```
 
-4.
+4.Target->Buid Settings->Linking   Other Linker Flags  添加  -ObjC 和 -fobjc-arc
 
-Target->Buid Settings->Linking   Other Linker Flags  添加  -ObjC 和 -fobjc-arc
+5.注意配置应用白名单
 
-5.
-
-注意配置应用白名单
-
-6.
-
-在OpenApiConstant.h文件中配置第三方信息
+6.在OpenApiConstant.h文件中配置第三方信息
 
 7.AppDelegate中添加以下代码 
 
@@ -100,6 +96,4 @@ NSString *vedioUrl = @"http://zbj.cnebtv.com/static_data/uploaddata/media/20501_
 [SCShareMessage setMessageWithTitle:@"测试一般连接" content:@"正在测试一般连接" image:AppIconSquare urlStr:vedioUrl];
 [SCOpenApiShareView showInView:self.view delegate:nil];
 ```
-
-
 
